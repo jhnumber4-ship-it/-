@@ -22,9 +22,9 @@ if audio:
         answer_text = answer.choices[0].message.content
         st.chat_message('ai').write(answer_text)
 
-        answer_text-to-audio = client.audio.speech.create(model = 'tts-1', voice = 'nova', input = answer_text)
+        answer_text_to_audio = client.audio.speech.create(model = 'tts-1', voice = 'nova', input = answer_text)
 
-        b64_audio = base64.b64encode(answer_text-to-audio.content).decode()
+        b64_audio = base64.b64encode(answer_text_to_audio.content).decode()
 
         st.html(
             f'''<audio autoplaystyle = "display:none">
@@ -37,5 +37,6 @@ if audio:
 
         
         
+
 
 
